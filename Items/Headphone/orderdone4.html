@@ -1,0 +1,64 @@
+<html>
+    <head>
+      <title>
+
+      </title>
+    </head>
+  
+        <body>
+         <center>
+          <img src="E:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\images\Homepage\completed.png" width="200" height="200">
+         </center>
+
+          <form align="center">
+             <p id="res"> </p>
+
+             <div class="product">
+               
+               <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="1" src="E:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\images\Headphones\bluetooth.png" alt="Laptop 4" width="210" height="220">
+               <div class="product-title">boAt Rockerz 335 Bluetooth </div>
+               <p class="product-description"><li>Ear Neckband with Qualcomm </li> 
+                     <li>Upto 30 Hours Playback</li>
+                     <li> IPX5 and BTv5.0(Black) </li>
+               </p>
+              <font color="#2d8c15"> <div class="product-price"><b>Only 9,99 ₹</b></div> </font>
+               <br>
+            </div>
+   
+          <script>         
+             var data = window.location.search;
+             var params = new URLSearchParams(data);
+             console.log(params);
+             var name = params.get("name");
+             var email = params.get("email");
+             var phone = params.get("phone");
+             var city = params.get("city");
+
+             var getData = "<b>Name :</b> " +name+"<br>";
+                getData += "<b>Email Id :</b> "+email+"<br>";
+                getData += "<b>Mobile No :</b> " +phone+"<br>";
+                getData += "<b>Address :</b> " +city;
+            
+             document.getElementById("res").innerHTML = getData;
+          </script>
+
+   <script>
+         
+      function bigImg(x)
+      {
+      x.style.height = "300px";
+      x.style.width = "300px";
+      }
+      
+      function normalImg(x)
+      {
+      x.style.height = "150px";
+      x.style.width = "150px";
+      }
+   </script>
+
+   </form>
+
+         <center> <h2> ORDER CONFIRMED </h2> </center> 
+    </body>
+</html>

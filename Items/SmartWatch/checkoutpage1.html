@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Checkout - Lixus Shopping Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container-form {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+
+        .container-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .containert-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .container-button:hover {
+            background-color: #555;
+        }
+
+        .container{
+            width: 450px;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Lixus Shopping Store</h1>
+    </header>
+
+   
+    <nav>
+        <a href="E:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\Home Page.html">Home</a>
+        <a href="E:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\Items\Laptop.html">Laptops</a>
+        <a href="E:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\Items\SmartPhone.html">Smartphones</a>
+        <a href="E:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\Items\Headphone.html">Headphones</a>
+        <a href="E:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\Items\SmartWatch.html">Smartwatches</a>
+        <a href="E:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\Items\TV.html">Smartwatches</a>
+        <a href="E:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\Items\HomeAppliance.html">Home Appliances</a>
+    </nav>
+
+    
+    <section>
+        <div class="container">
+            <h2>Checkout</h2>
+            <form method="get" action="orderdone1.html">
+
+                <div class="container-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="container-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required>
+                </div>
+
+                <div class="container-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" name="phone" required>
+                </div>
+
+                <div class="container-group">
+
+                    <label for="city">Enter your Addess : </label>
+                    <input type="text" select id="city" name="city" >
+                </div>
+
+                <a href="E:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\Items\Laptop\checkoutpage1.html"><button class="container-button">Checkout Order</button>  </a>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<html>
+    <head>
+      <title>
+
+      </title>
+    </head>
+  
+        <body>
+         <center>
+          <img src="E:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\images\Homepage\completed.png" width="200" height="200">
+         </center>
+
+          <form align="center">
+             <p id="res"> </p>
+
+             <div class="product">
+               <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="1" src="E:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\images\TV\images-removebg-preview.png" alt="Laptop 5" width="210" height="220">
+
+               <div class="product-title"><b>Haier Bezel Less Google  Smart AI Plus</b></div>
+            <p class="product-description"><li>Full HD LED Smart Android TV </li>
+                <li>Dolby Digital Decoder  (LE40K7700GA) </li>
+                <li>Handsfree Voice Search </li> </p>
+
+
+              <font color="#2d8c15"> <div class="product-price"><b>Only 29,999 ₹</b></div> </font>
+               <br>
+            </div>
+   
+          <script>         
+             var data = window.location.search;
+             var params = new URLSearchParams(data);
+             console.log(params);
+             var name = params.get("name");
+             var email = params.get("email");
+             var phone = params.get("phone");
+             var city = params.get("city");
+
+             var getData = "<b>Name :</b> " +name+"<br>";
+                getData += "<b>Email Id :</b> "+email+"<br>";
+                getData += "<b>Mobile No :</b> " +phone+"<br>";
+                getData += "<b>Address :</b> " +city;
+            
+             document.getElementById("res").innerHTML = getData;
+          </script>
+
+          
+<script>
+         
+   function bigImg(x)
+   {
+   x.style.height = "300px";
+   x.style.width = "300px";
+   }
+   
+   function normalImg(x)
+   {
+   x.style.height = "150px";
+   x.style.width = "150px";
+   }
+</script>
+
+   </form>
+
+         <center> <h2> ORDER CONFORMED </h2> </center> 
+    </body>
+</html>

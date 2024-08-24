@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: darkblue;
+        }
+
+        center {
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="tel"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        select {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: darkblue;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0e6ac6;
+        }
+    </style>
+</head>
+<body background="E:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\images\Homepage\bgg.jpg">
+    <br><br><br>
+    <center>
+        <h1>Lixus Shopping Store</h1>
+    </center>
+    <center>
+        <br><br>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <label for="email">Email Id</label>
+            <input type="text" id="email" placeholder="eg. vyanktesh" required>
+            <br>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="eg. vk08" required>
+            <br>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="+91**********" required>
+            <br>
+
+            <label for="city">City</label>
+            <select id="city" required>
+                <option value="1" selected disabled>--Select--</option>
+                <option value="2">Mumbai</option>
+                <option value="3">Nashik</option>
+                <option value="4">Jalgaon</option>
+                <option value="5">Pune</option>
+                <option value="6">Solapur</option>
+                <option value="7">Satara</option>
+                <option value="8">Aurangabad</option>
+                <option value="9">Kolhapur</option>
+                <option value="10">Nagpur</option>
+            </select>
+            <br>
+        </form>
+
+        <script>
+            function validateForm() {
+                const emailInput = document.getElementById('email');
+                const passwordInput = document.getElementById('password');
+                const phoneInput = document.getElementById('phone');
+                const citySelect = document.getElementById('city');
+
+                if (!validateEmail(emailInput.value)) {
+                    alert('Please enter a valid email address.');
+                    emailInput.focus();
+                    return false;
+                }
+
+                if (!validatePassword(passwordInput.value)) {
+                    alert('Please enter a valid password (at least 6 characters).');
+                    passwordInput.focus();
+                    return false;
+                }
+
+                if (!validatePhoneNumber(phoneInput.value)) {
+                    alert('Please enter a valid phone number.');
+                    phoneInput.focus();
+                    return false;
+                }
+
+                if (citySelect.value === "1") {
+                    alert('Please select a city.');
+                    citySelect.focus();
+                    return false;
+                }
+
+                return true;
+            }
+
+            function validateEmail(email) {
+                const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+                return emailPattern.test(email);
+            }
+
+            function validatePassword(password) {
+                return password.length >= 6;
+            }
+
+            function validatePhoneNumber(phone) {
+                const cleanedPhone = phone.replace(/\D/g, '');
+                if (cleanedPhone.length === 10) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            function validateButton() {
+                // If you want to reload the page, you can use window.location.reload()
+                // This function doesn't seem necessary in your case
+                // window.location.reload();
+
+                // If you want to call the validation functions here, you can do it like this:
+                return validateForm();
+            }
+        </script>
+
+        <!-- Note: Your link to the Home Page should be relative or an actual URL, not a local file path -->
+        <a href="Home Page.html"><button type="submit" onclick="return validateButton()">Submit</button></a>
+        <br><br>
+
+        <span>already have an account </span>
+        <a href="Login Page.html" class="button-link"><b><u>Login</u></b></a>
+    </center>
+</body>
+</html>

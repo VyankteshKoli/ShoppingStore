@@ -1,0 +1,36 @@
+<html>
+    <head>
+      <title>
+
+      </title>
+    </head>
+  
+        <body>
+         <center>
+          <img src="E:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\images\Homepage\completed.png" width="150" height="200">
+         </center>
+          <br>
+          <form align="center">
+             <p id="res"> </p>
+   
+          <script>
+             var data = window.location.search;
+             var params = new URLSearchParams(data);
+             console.log(params);
+             var name = params.get("name");
+             var email = params.get("email");
+             var phone = params.get("phone");
+             var city = params.get("city");
+
+             var getData = "<b>Name :</b> " +name+"<br>";
+                getData += "<b>Email Id :</b> "+email+"<br>";
+                getData += "<b>Mobile No :</b> " +phone+"<br>";
+                getData += "<b>Address :</b> " +city;
+             
+      
+             document.getElementById("res").innerHTML = getData;
+          </script>
+   </form>
+
+     </body>
+</html>

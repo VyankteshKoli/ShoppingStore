@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shopping Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product {
+            background-color: #c2c2c2;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 8px;
+            margin: 8px;
+            display: inline-block;
+            width: calc(33.33% - 20px);
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-title {
+            font-weight: bold;
+        }
+
+        .product-description {
+            margin-top: 10px;
+        }
+
+        .buy-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .buy-button:hover {
+            background-color: #555;
+        }
+    </style>
+
+<script>
+    function changeButtonColor(button) {
+        button.style.backgroundColor = '#555';
+    }
+
+    function resetButtonColor(button) {
+        button.style.backgroundColor = '#333';
+    }
+</script>
+</head>
+
+<body background="D:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\images\Homepage\bg.jpg">
+    <header>
+        <h1>Lixus Shopping Store</h1>
+    </header>
+
+    <section>
+        <div class="product">
+            <img src="D:/POLYTECHNIC ALL/5th Semester/CSS/Microproject/Shopping Store/images/Homepage/LAPTOP_HOME.jpg" alt="LAPTOP"  width="140" height="210">
+            <div class="product-title">Laptop</div>
+            <a href="D:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\Items\Laptop.html"> <button class="buy-button" onmouseover="changeButtonColor(this)" onmouseout="resetButtonColor(this)">Buy Now</button> </a>
+        </div>
+
+        <div class="product">
+            <img src="D:/POLYTECHNIC ALL/5th Semester/CSS/Microproject/Shopping Store/images/Homepage/PHONE_HOME.jpg" alt="Smart Phone"  width="140" height="210">
+            <div class="product-title">Smartphone</div>
+            <a href="D:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\Items\SmartPhone.html"> <button class="buy-button">Buy Now</button> </a>
+        </div>
+
+        <div class="product">
+            <img src="D:/POLYTECHNIC ALL/5th Semester/CSS/Microproject/Shopping Store/images/Homepage/HEADPHONE_HOME.jpg" alt="Headphones/Earbuds"  width="140" height="250">
+            <div class="product-title">Headphones/Earbuds</div>
+            <a href="D:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\Items\Headphone.html"> <button class="buy-button">Buy Now</button> </a>
+        </div>
+
+        <div class="product">
+            <img src="D:/POLYTECHNIC ALL/5th Semester/CSS/Microproject/Shopping Store/images/Homepage/TV_HOME.jpeg" alt="Smart Television"  width="120" height="210">
+            <div class="product-title">Smart Television</div>
+            <a href="D:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\Items\TV.html"> <button class="buy-button">Buy Now</button> </a>
+        </div>
+
+        <div class="product">
+            <img src="D:/POLYTECHNIC ALL/5th Semester/CSS/Microproject/Shopping Store/images/Homepage/WATCH_HOME.jpg" alt="Smart Watch"  width="140" height="210">
+            <div class="product-title">Smartwatch</div>
+            <a href="D:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\Items\SmartWatch.html"> <button class="buy-button">Buy Now</button> </a>
+        </div>
+
+        <div class="product">
+            <img src="D:/POLYTECHNIC ALL/5th Semester/CSS/Microproject/Shopping Store/images/Homepage/HOMEAPPLIANCE_HOME.jpg" alt="Home Appliance"  width="180" height="250">
+            <div class="product-title">Home Appliance</div>
+            <a href="D:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\Items\HomeAppliance.html"> <button class="buy-button">Buy Now</button> </a>
+        </div>
+    </section>
+</body>
+
+</html>

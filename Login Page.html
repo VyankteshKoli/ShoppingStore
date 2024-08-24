@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <style>
+      body {
+        background-color: #f0f0f0;
+
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+      h1 {
+        font-size: 24px;
+        color: darkblue;
+        text-align: center;
+      }
+
+      center {
+        text-align: center;
+      }
+
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      th {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input[type="text"] {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      input[type="password"] {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+
+      button {
+        background-color: darkblue;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #003366;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      a.button-link {
+        display: inline-block;
+      }
+
+      .button-container {
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body   background="E:\POLYTECHNIC ALL\5th Semester\CSS\Microproject\Shopping Store\images\Homepage\bgg.jpg"> 
+    <br><br><br>
+    <h1>Lixux Shopping Store</h1>
+
+    <br><br><br><br><br>
+
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+</head>
+<body>
+  <form id="loginForm" onsubmit="return validateForm()">
+    <center>
+      <h1>Enter an Email Id:</h1>
+      <input type="text" id="emailInput" placeholder="eg. viratkohli18@gmail.com" required>
+      <br>
+      <h1>Enter a Password:</h1>
+      <br>
+      <input type="password" id="passwordInput" placeholder="eg. Virat@18" required>
+      <br>
+      <button type="submit">Login</button>
+      <br><br>
+
+      <div class="button-container">
+        <span>Don't have an account?</span>
+        <a href="Sign Up.html" class="button-link"><b><u>Sign Up</u></b></a>
+      </div>
+    </center>
+  </form>
+
+  <script>
+    function validateForm() {
+      const emailInput = document.getElementById('emailInput');
+      const passwordInput = document.getElementById('passwordInput');
+      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      const passwordPattern = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#]).{6,}$/;
+
+      if (!emailPattern.test(emailInput.value)) {
+        alert('Please enter a valid email address.');
+        emailInput.focus();
+        return false;
+      }
+
+      if (!passwordPattern.test(passwordInput.value)) {
+        alert('Please enter a valid password (at least 6 characters with an uppercase letter, a digit, and @ or #).');
+        passwordInput.focus();
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+  </body>
+</html>
